@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@100;400;500&family=Varela+Round&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto',sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    height: 100%;
+    width: 100%;
+}
+.left{
+    width: 20vw;
+    max-height: 100%;
+    margin: 10px;
+}
+.right{
+    width: 78vw;
+    background-color: #242424;
+    border-radius: 10px;
+    margin: 10px 0px;
+    color: white;
+    overflow: hidden;
+    max-height: 100%;
+    position: relative;
+}
+.home>ul>li{
+    list-style: none;
+    width: 24px;
+    display: flex;
+    gap: 14px;
+    font-weight: bolder;
+    font-size: small;
+}
+.container{
+    background-color: black;
+}
+.home{
+    margin-bottom: 10px;
+    padding: 20px;
+}
+.library{
+    padding: 20px;
+    height: 70vh;
+    position: relative;
+}
+.heading{
+    display: flex;
+    gap: 14px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.heading>img{
+    width: 24px;
+}
+footer{
+    display: flex;
+    grid-column: auto;
+    font-size: 11px;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+}
+footer a{
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+header{
+    display: flex;
+    padding: 4px;
+    background-color: rgb(63 63 63);
+    align-items: center;
+    justify-content: center;
+}
+.buttons{
+    margin-left: auto;
+    margin-right: 20px;
+}
+.nav{
+    margin: 12px;
+    align-items: center;
+}
+.nav>img{
+    width: 36px;
+}
+.buttons>button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+}
+.playlist{
+    padding: 16px;
+}
+.playlist h2{
+    margin-bottom: 8px;
+}
+.playlist .card{
+    width: 150px;
+    padding: 10px;
+    background-color: rgb(65, 65, 65);
+    border-radius: 7px;
+    margin-top: 10px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+.card h4,p{
+    margin-top: 10px;
+}
+.card p{
+    font-size: small;
+    color: gainsboro;
+}
+/* .card >*{
+    margin-top: 10px;
+} */
+
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: 60vh;
+    overflow-y: scroll;
+}
+.card .playbutton{
+    width:38px;
+    position: absolute;
+    top: 100px;
+    right: 13px;
+    opacity: 0; /* Initially hide the play button */
+    transition: opacity 0.3s ease;
+}
+.card:hover {
+    background-color: #444; /* Change the background color on hover */
+}
+
+.card:hover .playbutton {
+    display: block; /* Make the play button visible on hover */
+}
+
+.card:hover .playbutton {
+    opacity: 1; /* Make the play button visible on hover */
+}
+
+header .buttons .logbtn{
+    background-color: #fff;
+    color: black;
+    font-weight: 900;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+}
+header .buttons .Signbtn{
+    background-color: #000;
+    color: grey;
+    font-weight: 900;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+}
+header .buttons .logbtn,
+header .buttons .Signbtn {
+    transition: all 0.2s ease;
+}
+header .buttons .logbtn:hover {
+    background-color: #f5f5f5; /* Lighter background color on hover */
+    color: black;
+    font-size: 18px; /* Slightly larger font size on hover */
+    cursor: pointer;
+}
+
+header .buttons .Signbtn:hover {
+    background-color: #333; /* Slightly darker background color on hover */
+    color: lightgrey;
+    font-size: 18px; /* Slightly larger font size on hover */
+    cursor: pointer;
+}
+.playbar {
+    background-color:#1a1a1a;
+    color: white;
+    justify-content: space-between;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+.playbar .songbtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+.playbar .songbtns:hover{
+    cursor: pointer;
+}
+#myProgressBar {
+    width: 100%;
+    cursor: pointer;
+    appearance: none; /* Removes the default styling */
+    height: 4px; /* Set the height of the track */
+    border-radius: 2px; /* Adds a slight curve to the edges of the track */
+}
+  
+ #myProgressBar::-webkit-slider-thumb {
+    appearance: none; /* Removes the default styling for WebKit browsers */
+    width: 12px; /* Set the width of the thumb */
+    height: 12px; /* Set the height of the thumb */
+    background-color: #1ed760; /* Set the color of the thumb */
+    border-radius: 50%; /* Makes the thumb circular */
+    cursor: pointer;
+}
+#myProgressBar::-webkit-slider-runnable-track,
+#myProgressBar::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  background-color: #1ed760; /* Color for the covered (progress) part */
+  border-radius: 2px;
+}
+  
